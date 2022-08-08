@@ -1,1 +1,1 @@
-This folder will contain test files for the printf project cases
+This folder will contain local test files to the printf project
