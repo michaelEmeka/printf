@@ -8,7 +8,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, t, counter;
+	int i = 0, t, counter, a;
 	char *str;
 	va_list args;
 
@@ -25,17 +25,18 @@ int _printf(const char *format, ...)
 			t = ++i;
 			if (format[t] == 'c')
 			{
-				str = va_arg(args, char*);
-				_putchar(*str);
+				a = va_arg(args, int);
+				_putchar(a);
 				counter++;
 			}
 			if (format[t] == 's')
 			{
 				str = va_arg(args, char*);
-				while (*str++)
+				while (*str)
 				{
 					_putchar(*str);
 					counter++;
+					str++;
 				}
 			}
 			if (format[t] == '%')
