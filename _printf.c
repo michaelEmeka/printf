@@ -7,8 +7,8 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, t, l, counter;
-	char c, *str;
+	int i = 0, t, counter;
+	char *str;
 	va_list args;
 
 	va_start(args, 50);
